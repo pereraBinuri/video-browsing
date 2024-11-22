@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Net</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="header-footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/upload.css">
+</head>
+<body>
+	
+	<!-- horizontal navigation bar -->
+	
+	
+	<div class="navbar">
+			<div class="logo">
+				<h1>Watch Net</h1>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.html">Videos</a></li>
+					<li><a href="package.html">Buy Premium</a></li>
+					<li><a href="payment.html">Upload</a></li>
+					
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="login">
+				<a href="login.html">Login</a>
+				<a href="Register.html">Register</a>
+			</div>
+		</div>
+	
+	
+	<!-- video upload form -->
+
+	<div class="upload-form">
+        <h2>Upload Your Video</h2>
+        <br>
+        <form action="SaveServlet" method="post" id="checkoutForm" onsubmit="return validateForm()">
+        
+        	<label for="user">User Name:</label><br>
+            <input type="text" id="user" name="user"><br>
+        
+            <label for="videoLink">Video Link:</label>
+            <input type="url" id="videoLink" name="videoLink" required>
+            
+            
+            <!--<label for="video">Video :</label><br>
+            <input type="file" id="video" name="video" required><br>
+            
+
+            <label for="thumbnail">Thumbnail :</label><br>
+            <input type="file" id="thumbnail" name="thumbnail" required><br>-->
+
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="travel">Travel</option>
+                <option value="comedy">Comedy</option>
+                <option value="music">Music</option>
+                <option value="educational">Educational</option>
+                <option value="news">News</option>
+                <option value="politics">Politics</option>
+                <option value="nature">Nature</option>
+                <option value="sports">Sports</option>
+            </select><br>
+
+            <label for="tags">Tags (comma separated):</label><br>
+            <input type="text" id="tags" name="tags"><br>
+            
+            <label for="videoLength">Video Length (minutes):</label><br>
+            <input type="number" id="videoLength" name="videoLength" required><br>
+
+            <label for="publishDate">Publishing Date:</label><br>
+            <input type="date" id="publishDate" name="publishDate" required><br>
+
+
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+    
+
+  
+	
